@@ -1,0 +1,14 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+metadata:
+  name: kafka-cluster
+
+namespace: kafka-cluster
+
+resources:
+  - namespace.yaml
+  - configmap.yaml
+  - storage/persistent-volumes.yaml
+  - kafka-broker-0.yaml
+  - kafka-broker-1.yaml
+  - kafka-broker-2.yaml
